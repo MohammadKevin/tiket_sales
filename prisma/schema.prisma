@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userID    Int      @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String   @unique
+  password  String
+  role      Role     @default(user)
+  tickets   Ticket[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Ticket {
+  ticketID   Int      @id @default(autoincrement())
+  userID     Int
+  eventID    Int
+  seatID     Int
+  bookedDate DateTime
+
+  user  User  @relation(fields: [userID], references: [userID])
+  event Event @relation(fields: [eventID], references: [eventID])
+  seat  Seat  @relation(fields: [seatID], references: [seatID])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Event {
+  eventID   Int      @id @default(autoincrement())
+  eventName String
+  eventDate DateTime
+  venue     String
+  price     Float
+  imageUrl  String?
+  tickets Ticket[]
+  seats   Seat[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Seat {
+  seatID   Int      @id @default(autoincrement())
+  eventID  Int
+  rowNum   Int
+  seatNum  Int
+  status   String
+
+  event   Event   @relation(fields: [eventID], references: [eventID])
+  tickets Ticket[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  user
+  admin
+}
