@@ -12,19 +12,19 @@
 
 ---
 
-## 📌 Overview
+## Overview
 An Express.js REST API built for event organizers to handle ticket categories, seat numbering, customer orders, and receipt file uploads with Multer.
 
 ---
 
-## ✨ Key Features
+## Key Features
 - Event creation, seat tiers (VIP, Regular), and ticket inventory quotas
 - Receipt attachment handling via Multer multipart parser
 - Unique ticket code generator for attendee check-in verification
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Framework**: Express.js
 - **ORM**: Prisma ORM
 - **FileHandling**: Multer
@@ -32,7 +32,7 @@ An Express.js REST API built for event organizers to handle ticket categories, s
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ```text
 tiket_sales/
 ├── controller/         # Event, Seat, Ticket, Auth controllers
@@ -42,7 +42,7 @@ tiket_sales/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 Make sure you have the required runtimes and tools installed on your machine:
@@ -60,7 +60,7 @@ npm run dev
 
 ---
 
-## 👤 Author
+## Author
 **Mohammad Kevin Arif Rudianto**
 - **GitHub:** [@MohammadKevin](https://github.com/MohammadKevin)
 - **Portfolio:** [portfolio-mohammadkevin.vercel.app](https://portfolio-mohammadkevin.vercel.app)
@@ -69,9 +69,9 @@ npm run dev
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 <div align="center">
-⭐️ If you found this repository useful, please consider giving it a star!
+If you found this repository useful, please consider giving it a star!
 </div>
