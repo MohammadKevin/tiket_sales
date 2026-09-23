@@ -18,9 +18,9 @@ An Express.js REST API built for event organizers to handle ticket categories, s
 ---
 
 ## ✨ Key Features
-- ⚡ **Event creation, seat tiers (VIP, Regular), and ticket inventory quotas**: Event creation, seat tiers (VIP, Regular), and ticket inventory quotas
-- ⚡ **Receipt attachment handling via Multer multipart parser**: Receipt attachment handling via Multer multipart parser
-- ⚡ **Unique ticket code generator for attendee check-in verification**: Unique ticket code generator for attendee check-in verification
+- Event creation, seat tiers (VIP, Regular), and ticket inventory quotas
+- Receipt attachment handling via Multer multipart parser
+- Unique ticket code generator for attendee check-in verification
 
 ---
 
